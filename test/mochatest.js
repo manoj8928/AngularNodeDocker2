@@ -17,7 +17,7 @@ describe("SAMPLE unit test",function(){
     server
     .post("/api/users")
     .expect("Content-type",/json/)
-    .expect(404) // THis is HTTP response
+    .expect(200) // THis is HTTP response
     .end(function(err,res){
       // HTTP status should be 200
       res.status.should.equal(404);
@@ -35,7 +35,7 @@ describe("SAMPLE unit test",function(){
     server
     .get("/api/users")
     .expect("Content-type",/json/)
-    .expect(404) // THis is HTTP response
+    .expect(200) // THis is HTTP response
     .end(function(err,res){
       // HTTP status should be 200
       res.status.should.equal(404);
