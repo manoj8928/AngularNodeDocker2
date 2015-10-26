@@ -17,10 +17,10 @@ describe("SAMPLE unit test",function(){
     server
     .post("/api/users")
     .expect("Content-type",/json/)
-    .expect(200) // THis is HTTP response
+    .expect(404) // THis is HTTP response
     .end(function(err,res){
       // HTTP status should be 200
-      res.status.should.equal(200);
+      res.status.should.equal(404);
       // Error key should be false.
      // res.body.error.should.equal(false);
       done();
@@ -35,10 +35,10 @@ describe("SAMPLE unit test",function(){
     server
     .get("/api/users")
     .expect("Content-type",/json/)
-    .expect(200) // THis is HTTP response
+    .expect(404) // THis is HTTP response
     .end(function(err,res){
       // HTTP status should be 200
-      res.status.should.equal(200);
+      res.status.should.equal(404);
       // Error key should be false.
      // res.body.error.should.equal(false);
       done();
